@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um convite especial ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TELA INICIAL -->
+    <section id="telaInicial" class="tela">
+        <div class="container">
+
+            <img src="./img1.jpg" alt="Imagem especial" class="imagem">
+
+            <h1>Você aceita sair comigo? ❤️</h1>
+
+            <p>Tenho um convite muito especial para você...</p>
+
+            <div class="botoes">
+                <button id="botaoSim" onclick="aceitar()">SIM </button>
+                <button id="botaoNao" onclick="recusar()">NÃO </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TELA DE ESCOLHA -->
+    <section id="telaCalendario" class="tela escondida">
+        <div class="container">
+
+            <h1>Vamos marcar nosso date? 💗</h1>
+
+            <p>Primeiro, escolha uma data:</p>
+
+            <input type="date" id="dataEscolhida">
+
+            <h2>O que você gostaria de fazer?</h2>
+
+            <p>Escolha apenas uma opção!</p>
+
+            <div class="opcoes">
+
+                <label class="opcao">
+                    <input type="radio" name="ideias" value="Cinema 🍿">
+                    <span>🍿 Cinema</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="ideias" value="Jantar ou lanche 🍕">
+                    <span>🍕 Jantar ou lanche</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="ideias" value="Ver o pôr do sol 🌅">
+                    <span>🌅 Ver o pôr do sol</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="ideias" value="Tomar sorvete 🍦">
+                    <span>🍦 Tomar sorvete</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="ideias" value="Cafeteria ☕">
+                    <span>☕ Cafeteria</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" id="outraOpcao" name="ideias" value="Outra ideia ❤️">
+                    <span>❤️ Outra ideia</span>
+                </label>
+
+            </div>
+
+            <input
+                type="text"
+                id="ideiaPersonalizada"
+                placeholder="Qual seria sua outra ideia?"
+                class="campo-personalizado"
+                disabled
+            >
+
+            <button class="botao-principal" onclick="confirmarData()">
+                Confirmar escolha 💗
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- TELA FINAL -->
+    <section id="telaFinal" class="tela escondida">
+        <div class="container">
+
+            <h1>Temos um encontro marcado! ❤️</h1>
+
+            <img src="./gif1.gif" alt="Imagem especial" class="imagem">
+
+            <h2>Nosso date será:</h2>
+
+            <p id="dataFinal" class="resultado"></p>
+
+            <h2>Vamos fazer:</h2>
+
+            <p id="ideiasFinais" class="resultado"></p>
+
+            <p>Mal posso esperar! 🥰</p>
+
+            <a id="linkWhatsApp" target="_blank" rel="noopener noreferrer">
+                Enviar pelo WhatsApp 💚
+            </a>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

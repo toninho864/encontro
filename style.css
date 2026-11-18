@@ -1,0 +1,224 @@
+
+@font-face {
+  font-family: "Shantell Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "BNCE" 0,
+    "INFM" 0,
+    "SPAC" 0;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Shantell Sans", cursive;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tela {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.escondida {
+    display: none;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imagem {
+    width: 180px;
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #e84375;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #e84375;
+    font-size: 20px;
+    margin: 25px 0 12px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#botaoSim {
+    background: #ff4081;
+    color: white;
+}
+
+#botaoNao {
+    background: #ddd;
+    color: #333;
+}
+
+button:hover {
+    filter: brightness(0.95);
+}
+
+input[type="date"],
+.campo-personalizado {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 14px 10px;
+    border: 2px solid #ffc1d3;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.opcao:has(input:checked) {
+    background: #ffe0eb;
+    border-color: #ff4081;
+    color: #d62968;
+    font-weight: bold;
+}
+
+.opcao input {
+    accent-color: #ff4081;
+}
+
+.campo-personalizado:disabled {
+    background: #f3f3f3;
+    cursor: not-allowed;
+}
+
+.campo-personalizado:not(:disabled) {
+    background: white;
+    border-color: #ff4081;
+}
+
+.botao-principal {
+    width: 100%;
+    background: #ff4081;
+    color: white;
+    margin-top: 10px;
+}
+
+.resultado {
+    background: #fff0f5;
+    padding: 12px;
+    border-radius: 10px;
+    color: #d62968;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+#linkWhatsApp {
+    display: block;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@keyframes explosao {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(1.5) rotate(20deg);
+        opacity: 1;
+    }
+
+    60% {
+        transform: scale(2) rotate(-20deg);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.explodir {
+    animation: explosao 0.5s ease-out forwards;
+    pointer-events: none;
+}
+
+@media (max-width: 400px) {
+    .opcoes {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 25px 18px;
+    }
+}
